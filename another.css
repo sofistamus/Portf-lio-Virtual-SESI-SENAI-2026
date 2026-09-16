@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+body {
+    background-image: url('img/áreas.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color:#FFF;
+    font-family: 'Playfair Display', sans-serif;
+    align-items: center;
+}
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+}
+section{
+    align-items: center;
+    text-align: center;
+}
+button {
+  margin: 5px;
+  padding: 10px;
+  border-radius:10px;
+  border-color: #fff;
+  cursor: pointer;
+  background: #c44d4d;
+  color: white;
+  font-family: 'Poppins';
+  align-items:center ;
+  text-align: center;
+  box-shadow: 0 4px 10px #FFF;
+}
+footer p{
+    font-size: larger;
+    text-align: center;
+    
+}

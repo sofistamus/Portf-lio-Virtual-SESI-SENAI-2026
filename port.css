@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    background-image: url('img/wallpaper (2).png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16x;
+    font-family: 'Poppins';
+    font-size: 17px;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+header img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px #FFF;
+}
+.center{
+    text-align: center;
+}
+footer img{
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    box-shadow: 0 4px 10px #FFF;
+}
+footer {
+    display: flex;
+    justify-content: center;
+}
+footer a{
+    text-align: center;
+    margin: 20px;
+}
+footer p {
+    font-size: larger;
+    font-family: 'Poppins';
+}
+main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+}
+.card{
+    background: #c44d4d;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px #FFF;
+    margin-bottom: 20px;
+    font-family: 'Poppins';
+}
+h3{
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: 'Poppins', serif;
+}
+p{
+    color: #fff;
+    line-height: 1.6;
+}
+h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}

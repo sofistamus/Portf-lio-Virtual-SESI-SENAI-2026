@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+body {
+    background-image: url('img/wallpaper (3).png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    font-family: 'Playfair Display', sans-serif;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+
+    ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16x;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}

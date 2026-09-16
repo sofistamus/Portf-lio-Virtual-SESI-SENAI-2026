@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+body {
+    background-image: url('img/áreas.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    font-family: 'Playfair Display', sans-serif;
+}
+h1{
+    text-align: center;
+}
+footer {
+    display: flex;
+    justify-content: center;
+}
+footer img{
+    text-align: center;
+    width: 900px;
+    height: 750px;
+}
