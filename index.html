@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - Portfólio</title>
     <link rel="stylesheet" href="login.css">
-
 </head>
 <body>
     <div class="login">
         <h1>Meu Portfólio</h1>
         <h2>Login</h2>
-        <input
-            type="text"
-            id="usuario"
-            placeholder="Digite seu usuário"
-        >
-        <input
-            type="password"
-            id="senha"
-            placeholder="Digite sua senha"
-        >
-        <button onclick="fazerLogin()">
-            Entrar
-        </button>
+
+        <form onsubmit="event.preventDefault(); fazerLogin();">
+            <input type="text" id="usuario" placeholder="Usuário">
+
+<input type="password" id="senha" placeholder="Senha">
+
+<button type="button" onclick="fazerLogin()">Entrar</button>
+
+        </form>
+
         <p id="mensagem"></p>
     </div>
+
     <script src="login.js"></script>
 </body>
 </html>

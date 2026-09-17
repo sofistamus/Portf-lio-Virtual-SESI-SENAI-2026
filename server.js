@@ -17,8 +17,7 @@ const banco = mysql.createConnection({
 
 banco.connect((erro) => {
     if (erro) {
-        console.log("Erro ao conectar ao MySQL:");
-        console.log(erro);
+        console.log("Erro ao conectar com o MySQL:", erro);
     } else {
         console.log("MySQL conectado!");
     }
@@ -28,19 +27,16 @@ app.post("/login", (req, res) => {
 
     const { usuario, senha } = req.body;
 
-    const sql = `
-        SELECT * FROM usuarios
-        WHERE usuario = ? AND senha = ?
-    `;
+    const sql = "SELECT * FROM usuarios WHERE usuario = ? AND senha = ?";
 
     banco.query(sql, [usuario, senha], (erro, resultados) => {
 
         if (erro) {
-            console.log(erro);
+            console.log("Erro na consulta:", erro);
 
             return res.status(500).json({
                 sucesso: false,
-                mensagem: "Erro no banco de dados."
+                mensagem: "Erro no servidor."
             });
         }
 
@@ -55,14 +51,15 @@ app.post("/login", (req, res) => {
 
             res.json({
                 sucesso: false,
-                mensagem: "Usuário ou senha incorretos!"
+                mensagem: "Usuário ou senha incorretos."
             });
 
         }
-
     });
 });
 
-app.listen(3000, () => {
-    console.log("Servidor rodando em http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
 });
