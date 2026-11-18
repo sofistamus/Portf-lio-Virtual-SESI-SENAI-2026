@@ -1,0 +1,120 @@
+/* ===== BASE ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --vermelho: #9a3a38;
+    --vermelho-escuro: #9a3a38;
+    --texto: #ffffff;
+}
+
+body.pagina-projeto {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: var(--texto);
+    background-color: #9a3a38;
+    background-image: url("img/áreas.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ===== CENTRALIZAÇÃO ===== */
+.topo {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 20px;
+}
+
+.projeto {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ===== TÍTULO ===== */
+.cabecalho {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cabecalho h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: clamp(40px, 7vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    color: #fff8ec;
+    text-shadow: 0 2px 14px rgba(70, 15, 15, 0.55);
+}
+
+.subtitulo {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #ffffff;
+    text-shadow: 0 1px 8px rgba(70, 15, 15, 0.6);
+}
+
+/* ===== CARTÕES ===== */
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cartao {
+    padding: 30px 26px 34px;
+    background: var(--vermelho);
+    border: 1px solid rgba(255, 233, 200, 0.55);
+    border-radius: 24px;
+    box-shadow: 0 24px 50px -16px rgba(50, 10, 10, 0.65);
+    text-align: center;
+    color: #ffffff;
+    transition: transform .2s, background-color .2s;
+}
+
+.cartao:hover {
+    transform: translateY(-3px);
+    background: var(--vermelho-escuro);
+}
+
+.cartao h2 {
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.35);
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: clamp(22px, 2.4vw, 26px);
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.cartao p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 860px) {
+    .cartoes {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        margin: 0 auto;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    body.pagina-projeto { background-attachment: scroll; }
+    .topo { padding: 36px 14px; }
+    .cartao { padding: 24px 20px 26px; border-radius: 20px; }
+    .cartao p { font-size: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cartao { transition: none; }
+    .cartao:hover { transform: none; }
+}
